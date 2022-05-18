@@ -1,0 +1,213 @@
+{% load static %}
+<footer id="footer" class="dark" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url({% static "acrigrabados\images\footer\footer.webp" %}) no-repeat; background-size: cover;"s>
+    <div class="container">
+        <!-- Footer Widgets
+        ============================================= -->
+        <div class="footer-widget-wrapped">
+
+            <div class="row col-mb-10">
+                <div class="col-md-6 col-lg-4">
+
+                    <div>   
+                        <h3>Acrigrabados S.A</h3>
+                        <p>Somos un equipo de profesionales al servicio de nuestros clientes; diseñamos, fabricamos e
+                            instalamos. Contamos con máquinas Cnc Rourter, Corte plasma y Corte láser.</p>
+
+                        {% comment %} <div
+                            style="background: url('{% static "images/world-map.png" %}') no-repeat center center; background-size: 100%;">
+                            <address>
+                                <strong>Headquarters:</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                            </address>
+                            <abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+                            <abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+                            <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                        </div> {% endcomment %}
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="widget clearfix">
+                        <h3>Nuestra Ubicación</h3>
+                        <div>
+                            <address  
+                            style="background: url('{% static "images/world-map.png" %}') no-repeat center center; background-size: 100%; height: 200px">
+                                <strong>Local:</strong><br>
+                                Acrigrabados S.A, 2GP4+H93<br>
+                                 Calle K, Panama City<br>
+                            </address>
+                        </div>
+                        {% comment %} <h4>Client Testimonials</h4>
+
+                        <div class="fslider testimonial no-image bg-transparent border-0 shadow-none p-0"
+                            data-animation="slide" data-arrows="false">
+                            <div class="flexslider">
+                                <div class="slider-wrap">
+                                    <div class="slide">
+                                        <div class="testi-image">
+                                            <a href="#"><img src="{% static 'images/testimonials/3.jpg' %}"
+                                                    alt="Customer Testimonails"></a>
+                                        </div>
+                                        <div class="testi-content">
+                                            <p>Similique fugit repellendus expedita excepturi iure perferendis
+                                                provident quia eaque. Repellendus, vero numquam?</p>
+                                            <div class="testi-meta">
+                                                Steve Jobs
+                                                <span>Apple Inc.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="testi-image">
+                                            <a href="#"><img src="{% static 'images/testimonials/2.jpg' %}"
+                                                    alt="Customer Testimonails"></a>
+                                        </div>
+                                        <div class="testi-content">
+                                            <p>Natus voluptatum enim quod necessitatibus quis expedita harum
+                                                provident eos obcaecati id culpa corporis molestias.</p>
+                                            <div class="testi-meta">
+                                                Collis Ta'eed
+                                                <span>Envato Inc.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="testi-image">
+                                            <a href="#"><img src="{% static 'images/testimonials/1.jpg' %}"
+                                                    alt="Customer Testimonails"></a>
+                                        </div>
+                                        <div class="testi-content">
+                                            <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur
+                                                ullam quibusdam cum libero illo rerum!</p>
+                                            <div class="testi-meta">
+                                                John Doe
+                                                <span>XYZ Inc.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> {% endcomment %}
+
+                     {% comment %} <div class="widget clearfix">
+
+                        <a href="#" class="social-icon si-small si-rounded si-facebook">
+                            <i class="icon-facebook"></i>
+                            <i class="icon-facebook"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-twitter">
+                            <i class="icon-twitter"></i>
+                            <i class="icon-twitter"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-gplus">
+                            <i class="icon-gplus"></i>
+                            <i class="icon-gplus"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-pinterest">
+                            <i class="icon-pinterest"></i>
+                            <i class="icon-pinterest"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-vimeo">
+                            <i class="icon-vimeo"></i>
+                            <i class="icon-vimeo"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-github">
+                            <i class="icon-github"></i>
+                            <i class="icon-github"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-yahoo">
+                            <i class="icon-yahoo"></i>
+                            <i class="icon-yahoo"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-rounded si-linkedin">
+                            <i class="icon-linkedin"></i>
+                            <i class="icon-linkedin"></i>
+                        </a>
+
+                    </div> 
+
+                 </div> {% endcomment %}
+                    {% comment %} <div class="widget quick-contact-widget form-widget clearfix">
+
+                        <h4>Send Message</h4>
+
+                        <div class="form-result"></div>
+
+                        <form id="quick-contact-form" name="quick-contact-form" action="include/form.php" method="post"
+                            class="quick-contact-form mb-0">
+
+                            <div class="form-process">
+                                <div class="css3-spinner">
+                                    <div class="css3-spinner-scaler"></div>
+                                </div>
+                            </div>
+
+                            <div class="input-group mx-auto">
+                                <div class="input-group-text"><i class="icon-user"></i></div>
+                                <input type="text" class="required form-control" id="quick-contact-form-name"
+                                    name="quick-contact-form-name" value="" placeholder="Full Name" />
+                            </div>
+                            <div class="input-group mx-auto">
+                                <div class="input-group-text"><i class="icon-email2"></i></div>
+                                <input type="text" class="required form-control email" id="quick-contact-form-email"
+                                    name="quick-contact-form-email" value="" placeholder="Email Address" />
+                            </div>
+                            <textarea class="required form-control input-block-level short-textarea"
+                                id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30"
+                                placeholder="Message"></textarea>
+                            <input type="text" class="d-none" id="quick-contact-form-botcheck"
+                                name="quick-contact-form-botcheck" value="" />
+                            <input type="hidden" name="prefix" value="quick-contact-form-">
+                            <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit"
+                                class="button m-0" value="submit">Send Email
+                            </button>
+
+                        </form> {% endcomment %}
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4 ">
+                <h3>Contáctanos</h3>
+                <div>   <abbr title="Numero Telefonico"><strong>Teléfono:</strong></abbr> +507 6168-7511<br>
+{#                        <abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>#}
+                        <abbr title="Correo Electronico"><strong>Email:</strong></abbr> comercial@acrigrabados.com
+                    </div>
+          </div>
+     </div>  
+        </div><!-- .footer-widgets-wrap end -->
+    </div>
+
+    <!-- Copyrights
+    ============================================= -->
+    <div id="copyrights">
+        <div class="container">
+
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-auto text-center text-lg-start">
+                    <p class="mb-3">Copyrights &copy; 2022 Desarrollado por 
+                        <a class="link-success" href="https://www.dvlance.com/" target="_blank">Dvlance</a>
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-auto text-center text-lg-end">
+                    <div class="copyrights-menu copyright-links mb-0">
+                        <a href="{% url 'home' %}">Inicio</a>/<a href="{% url 'services' %}">Servicios</a>/<a href="{% url 'contact' %}">Contacto</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- #copyrights end -->
+</footer>

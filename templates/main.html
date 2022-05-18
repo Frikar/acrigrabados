@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="ltr" lang="es-ES">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Dvlance"/>
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700&display=swap"
+            rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type="text/css"/>
+
+    <!-- Construction Demo Specific Stylesheet -->
+    <link rel="stylesheet" href="{% static 'demos/construction/construction.css' %}" type="text/css"/>
+    <!-- / -->
+
+    <link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/font-icons.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css"/>
+
+    <link rel="stylesheet" href="{% static 'demos/construction/css/fonts.css' %}" type="text/css"/>
+
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css"/>
+
+    {% block extra_css %}
+    {% endblock extra_css %}
+
+    {% block extra_js %}
+    {% endblock extra_js %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="{% static 'css/colors.css' %}" type="text/css"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'acrigrabados/images/icons/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'acrigrabados/images/icons/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'acrigrabados/images/icons/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'acrigrabados/images/icons/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'acrigrabados/images/icons/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'acrigrabados/images/icons/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'acrigrabados/images/icons/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'acrigrabados/images/icons/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'acrigrabados/images/icons/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'acrigrabados/images/icons/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'acrigrabados/images/icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'acrigrabados/images/icons/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'acrigrabados/images/icons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'acrigrabados/images/icons/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'acrigrabados/images/icons/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        .floating-contact-wrap {
+            position: fixed;
+            right: 50px;
+            bottom: 60px;
+            z-index: 299;
+            -webkit-transition: right .2s ease;
+            -o-transition: right .2s ease;
+            transition: right .2s ease;
+        }
+
+        .stretched .floating-contact-wrap + #gotoTop {
+            bottom: 100px;
+        }
+
+        .floating-contact-wrap .floating-contact-btn {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: #1abc5b;
+            color: #FFF;
+            cursor: pointer;
+            z-index: 3;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            transition: transform .3s ease;
+        }
+
+        .floating-contact-wrap .floating-contact-btn:hover,
+        .floating-contact-wrap.active .floating-contact-btn {
+            -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+            background-color: #222;
+        }
+
+        .floating-contact-wrap .floating-contact-btn .floating-contact-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 22px;
+            -webkit-transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            -webkit-transition-property: opacity, -webkit-transform;
+            transition-property: opacity, transform;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-backface-visibility: hidden;
+        }
+
+        .floating-contact-wrap .floating-contact-btn .floating-contact-icon.btn-active,
+        .floating-contact-wrap.active .floating-contact-btn .floating-contact-icon {
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .floating-contact-wrap.active .floating-contact-btn .floating-contact-icon.btn-active {
+            opacity: 1;
+            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    </style>
+
+    <!-- Document Title
+    ============================================= -->
+    {% block meta_title %}
+        <title>Acrigrabados</title>
+    {% endblock meta_title %}
+    <!-- Metatags fijas -->
+    <meta name="robots" content= "index, follow">
+    <meta name="keywords" content="letreros, corte laser, letras formadas, panama, letreros oficina, letreros negocios, panama letreros, acrigrabados, corte plasma, acrícilico">
+    <meta name="language" content="Español">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Frikardu">
+    <meta name="twitter:creator" content="@Frikardu">
+    <link rel="canonical" href="https://www.acrigrabados.com/">
+    <meta name="twitter:image" content="https://www.acrigrabados.com/static/acrigrabados/images/acrigrabados-panama.jpg">
+    <meta property="og:image" content="https://www.acrigrabados.com/static/acrigrabados/images/acrigrabados-panama.jpg">
+
+
+    {% block meta_tags %}
+    <!-- Metatags no fijas -->
+    {% endblock meta_tags %}
+</head>
+
+<body class="stretched">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+    <!-- Header  -->
+    {% include 'navbar.html' %}
+    <!-- #header end -->
+
+    <!-- Content
+============================================= -->
+    {% block content %}
+    {% endblock content %}
+    <!-- #content end -->
+
+    <!-- Footer
+============================================= -->
+    {% include 'footer.html' %}
+    <!-- #footer end -->
+
+</div><!-- #wrapper end -->
+<div class="floating-contact-wrap">
+    <a class="floating-contact-btn shadow"
+       href="https://wa.me/50761687511/?text=Me%20interesa%20contactar%20con%20ustedes." target="_blank">
+        <i class="floating-contact-icon btn-unactive icon-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- JavaScripts
+============================================= -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/plugins.min.js' %}"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="{% static 'js/functions.js' %}"></script>
+
+{% block extra_footer_js %}
+{% endblock extra_footer_js %}
+
+</body>
+
+</html>

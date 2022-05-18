@@ -1,0 +1,339 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block meta_tags %}
+<meta name="description" content="En Acrigrabados somos un equipo de
+profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+servicio a nuestros clientes">
+<meta property="og:title" content="Inicio - Acrigrabados">
+<meta property="og:description" content="En Acrigrabados somos un equipo de
+profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+servicio a nuestros clientes">
+<meta name="twitter:title" content="Inicio - Acrigrabados">
+<meta name="twitter:description" content="En Acrigrabados somos un equipo de
+profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+servicio a nuestros clientes">
+
+<!-- Metatags no fijas -->
+{% endblock %}
+
+{% block content %}
+<!-- Slider
+    ============================================= -->
+<section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100 include-header" data-loop="true" data-effect="fade" data-autoplay="4000">
+    <div class="slider-inner">
+        <!--- Edgard cambiar textos -->
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dark">
+                    <div class="container">
+                        <div class="slider-caption slider-caption-center">
+                            <h2 data-animate="fadeInUp">BIENVENIDOS A <br>ACRIGRABADOS S.A</h2>
+                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Somos un equipo de
+                                profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+                                servicio a nuestros clientes, Contamos con máquinas Cnc Rourter, Corte plasma y Corte láser, siendo para nosotros
+                                un gusto atenderle. </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide-bg"
+                        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'acrigrabados/images/slider/1.jpg' %}) center / cover no-repeat;"></div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container">
+                        <div class="slider-caption slider-caption-center">
+                            <h2 data-animate="fadeInUp">BIENVENIDOS A <br>ACRIGRABADOS S.A</h2>
+                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">
+                                Somos un equipo de
+                                profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+                                servicio a nuestros clientes, Contamos con máquinas Cnc Rourter, Corte plasma y Corte láser, siendo para nosotros
+                                un gusto atenderle.</p>
+                        </div>
+                    </div>
+                    <div class="video-wrap no-placeholder">
+                        <video id="slide-video" poster="{% static 'acrigrabados/images/videos/poster.png' %}" preload="auto"
+                            loop autoplay muted playsinline>
+                            <source src="{% static 'acrigrabados/images/videos/acrigrabados-video.webm' %}" type='video/webm' />
+                            <source src="{% static 'acrigrabados/images/videos/acrigrabados-video.mp4' %}" type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container">
+                        <div class="slider-caption">
+                            <h2 data-animate="fadeInUp">BIENVENIDOS A <br>ACRIGRABADOS S.A</h2>
+                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Somos un equipo de
+                                profesionales encargados de diseñar, fabricar e instalar para ofrecer el mejor
+                                servicio a nuestros clientes, Contamos con máquinas Cnc Rourter, Corte plasma y Corte láser, siendo para nosotros
+                                un gusto atenderle.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide-bg"
+                        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'acrigrabados/images/slider/2.jpg' %}) center / cover no-repeat;">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        </div>
+
+        <a href="#" data-scrollto="#content" data-offset="100" class="one-page-arrow dark"><i
+                class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+    </div>
+</section>
+<!-- #Slider end -->
+
+
+<section id="content">
+    <div class="content-wrap">
+
+        <!-- Promo contenido (listo)-->
+        <div class="promo promo-light promo-full promo-uppercase p-5 bottommargin-lg header-stick">
+            <div class="container clearfix">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg">
+                        <h3 style="letter-spacing: 2px;">Comienza tu nuevo proyecto con nosotros</h3>
+                        <span>Contáctanos para hacer realidad tu idea.</span>
+                    </div>
+                    <div class="col-12 col-lg-auto mt-4 mt-lg-0">
+                        <a href="{% url 'contact' %}" class="button button-large button-circle button-black m-0">Comienza ya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios, listo-->
+        <div class="container clearfix">
+
+            <div class="row justify-content-center col-mb-50">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img class="rounded" src="{% static 'acrigrabados/images/services/1.png' %}"
+                                alt="Diseño">
+                        </div>
+                        <div class="fbox-content px-0">
+                            <h3>Diseño</h3>
+                            <p class="justify-text">
+                               Llevamos a cabo actividades en torno al diseño gráfico e 
+                               industrial y como comunicador visual, capaz de trasmitir y
+                               plasmarlo en los proyectos que se realiza, teniendo la capacidad de solucionar 
+                               y dar respuesta a las demandas de los usuarios a través de sus diseños o productos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img class="rounded" src="{% static 'acrigrabados/images/services/2.png' %}" alt="Fabricación">
+                        </div>
+                        <div class="fbox-content px-0">
+                            <h3>Fabricación</h3>
+                            <p class="justify-text">
+                                Trabajamos en los productos de los clientes, con el fin de desarrollar, 
+                                crear e implementar proyectos destinados al consumo de grandes masas, 
+                                el consumo industrial o en serie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img class="rounded" src="{% static 'acrigrabados/images/services/3.png' %}"
+                                alt="Instalación">
+                        </div>
+                        <div class="fbox-content px-0">
+                            <h3>Instalación</h3>
+                            <p class="justify-text">
+                               Tenemos la capacidad como creativos en el proceso de la optimización de productos industriales 
+                               a través del propio diseño. contamos con la capacidad y experiencia necesaria para construir, 
+                               diseñar y gestionar diferentes áreas del diseño y va desde la creación del producto hasta el diseño de 
+                               todo tipo de mobiliario.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Parallax, cambiado por otro item -->
+        <div class="section parallax dark mt-6 border-0" style="padding: 150px 0; background-image: url({% static 'acrigrabados/images/acrigrabados-panama.jpg' %});" data-bottom-top="background-position:0px -300px;" data-top-bottom="background-position:0px 0px;">
+					<div class="container text-center">
+
+						<div class="emphasis-title">
+							<h2>Tu mejor opción en Panamá</h2>
+							<p class="lead topmargin-sm">No dudes en ver el catálogo de productos antes de contactarnos.</p>
+						</div>
+
+						<a href="#" data-scrollto="#portfolio" data-offset="100" class="button button-rounded button-white button-light button-large">Ver ya</a>
+
+					</div>
+				</div>
+
+        <!-- (no lo usaremos, aun)-->
+        {% comment %}<div class="container">
+
+            <div class="row align-items-stretch col-mb-50">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/building.png' %}"
+                                    alt="Concrete Developments"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Concrete Developments</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/bank.png' %}"
+                                    alt="Finance Assistance"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Finance Assistance</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/drawer.png' %}"
+                                    alt="Interiorly Designed"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Interiorly Designed</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/paper-money.png' %}"
+                                    alt="Cost Effective Solutions"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Cost Effective Solutions</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/traffic-cone.png' %}"
+                                    alt="Smart Builders"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Smart Builders</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><img src="{% static 'demos/construction/images/icons/paint-brush.png' %}"
+                                    alt="Quality Infrastructure"></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Quality Infrastructure</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere
+                                distinctio placeat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>{% endcomment %}
+
+        <!-- (Cambiado, listo)-->
+        <div class="section mb-0">
+            <h2 class="center mb-0 ls1">Nuestros servicios</h2>
+        </div>
+
+        <!-- Aqui es donde esta la galería -->
+        <div id="portfolio" class="portfolio row grid-container g-0">
+             <!-- Aqui es donde hara el for -->
+             {% for category in categories %}
+                {% if category.image %}
+                    <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-media pf-icons">
+                    <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <img src="/media/{{category.image}}" alt="{{category.name}}">
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+                                        <a href="{% url 'category' category.slug %}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
+                                            data-hover-animate-out="zoomOut" data-hover-speed="350"><i class="icon-line-outbox"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h3><a href="{% url 'category' category.slug %}">{{category.name}}</a></h3>
+                            </div>
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+            <!-- Aqui es donde cierra el for -->
+
+        </div>
+
+        <a href="{% url 'services' %}"
+            class="button button-3d border-bottom-0 button-full center text-end bottommargin-lg fw-light font-primary"
+            style="font-size: 26px;">
+            <div class="container clearfix">
+                ¿Te gustaria ver todos nuestros de servicios? <strong>Miralos aquí</strong> <i
+                    class="icon-angle-right" style="top:3px;"></i>
+            </div>
+        </a>
+
+        <div class="line topmargin-sm"></div>
+
+        <!-- (Listo, cambiado)-->
+        <div class="section bg-transparent mt-0 p-0 footer-stick">
+            <div class="container clearfix">
+
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img src="{% static 'acrigrabados/images/services/estas-en.webp' %}"
+                            alt="Estas en buenas manos">
+                    </div>
+                    <div class="col-lg-5 topmargin-sm">
+                        <div class="heading-block border-bottom-0">
+                            <h2>ESTÁS EN BUENA MANOS.</h2>
+                            <span class="ls1">Cinco puntos que definen nuestra confiabilidad.</span>
+                        </div>
+
+                        <ul class="iconlist iconlist-large iconlist-color">
+                            <li><i class="icon-ok"></i> Máquinas de alta tecnología</li>
+                            <li><i class="icon-ok"></i> Materiales de calidad</li>
+                            <li><i class="icon-ok"></i> Equipo de profesionales a su servicio</li>
+                            <li><i class="icon-ok"></i> Dedicación en cada proyecto</li>
+                            <li><i class="icon-ok"></i> Tiempos de entrega</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

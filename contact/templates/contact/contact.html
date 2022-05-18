@@ -1,0 +1,144 @@
+{% extends 'main.html' %}
+
+{% block meta_title %}
+<title>Contacto - Acrigrabados</title>
+{% endblock %}
+
+{% block meta_tags %}
+<meta name="description" content="Completa nuestro formulario de contacto y nosotros nos comunicaremos contigo 
+                                  via correo electronico o whatsappp">
+<meta property="og:title" content="Contacto - Acrigrabados">
+<meta property="og:description" content="Completa nuestro formulario de contacto y nosotros nos comunicaremos contigo 
+via correo electronico o whatsappp">
+<meta name="twitter:title" content="Contacto - Acrigrabados">
+<meta name="twitter:description" content="Completa nuestro formulario de contacto y nosotros nos comunicaremos contigo 
+via correo electronico o whatsappp">
+<!-- Metatags no fijas -->
+{% endblock %}
+
+{% block content %}
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+
+                <div class="row align-items-stretch col-mb-50 mb-0">
+                    <!-- Contact Form
+                    ============================================= -->
+                    <div class="col-lg-6">
+
+                        <div class="fancy-title title-border">
+                            <h3>¡Contáctanos!</h3>
+                        </div>
+
+                        <div>
+
+                            <form class="mb-0" action="" method="POST" onsubmit="alert()" >
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label for="template-contactform-name">Nombre <small>*</small></label>
+                                        <input type="text" placeholder="Nombre" required id="template-contactform-name"
+                                               name="template-contactform-name" value="" maxlength="100"
+                                               class="sm-form-control required"/>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="col-md-12 form-group">
+                                        <label for="template-contactform-email">Correo Electrónico
+                                            <small>*</small></label>
+                                        <input type="email" placeholder="Correo Electronico" required
+                                               id="template-contactform-email" name="template-contactform-email"
+                                               value="" class="required email sm-form-control" maxlength="100"/>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="col-md-12 form-group">
+                                        <label for="template-contactform-phone">Número Telefónico (Opcional)</label>
+                                        <input type="tel" placeholder="Numero Telefonico"
+                                               id="template-contactform-phone" name="template-contactform-phone" pattern="[0-9]+"
+                                               value="" class="sm-form-control" maxlength="14"/>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="col-12 form-group">
+                                        <label for="template-contactform-message">Mensaje <small>*</small></label>
+                                        <textarea class="required sm-form-control no-resize" required
+                                                  placeholder="Mensaje" id="template-contactform-message"
+                                                  name="template-contactform-message" rows="6" cols="30"></textarea>
+                                    </div>
+
+                                    <div class="col-12 form-group d-none">
+                                        <input type="text" id="template-contactform-botcheck"
+                                               name="template-contactform-botcheck" value="" class="sm-form-control"/>
+                                    </div>
+
+                                    <div class="col-12 form-group">
+                                        <button name="submit" type="submit" id="submit-button" tabindex="5"
+                                                value="Submit" class="button button-3d m-0">Enviar
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success" role="alert" id="success-alert" hidden>
+                                        Mensaje Enviado satisfactoriamente.
+                                              </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div><!-- Contact Form End -->
+
+                    <!-- Google Map
+                    ============================================= -->
+                    <div class="col-lg-6 min-vh-50">
+                        <iframe src="https://embed.waze.com/iframe?zoom=16&lat=9.036405&lon=-79.494088&ct=livemap&pin=1"
+                                width="600" height="450" allowfullscreen></iframe>
+                    </div><!-- Google Map End -->
+                </div>
+
+                <!-- Contact Info
+                ============================================= -->
+                <div class="row col-mb-50">
+
+                    <div class="col-sm-6 col-lg-3">
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="feature-box fbox-center fbox-bg fbox-plain">
+                            <div class="fbox-icon">
+                                <a href="https://maps.app.goo.gl/L7YGeq8TrPw6HVrF9" target="_blank"><i class="icon-map-marker2"></i></a>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Nuestra ubicación<span class="subtitle">2GP4+H93, Calle K, Panama City</span></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="feature-box fbox-center fbox-bg fbox-plain">
+                            <div class="fbox-icon">
+                                <a href="tel:61687511"><i class="icon-phone3"></i></a>
+                            </div>
+                            <div class="fbox-content">
+                                <h3>Teléfono<span class="subtitle">+507 6168-7511</span></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                    </div>
+                </div><!-- Contact Info End -->
+
+            </div>
+        </div>
+    </section><!-- #content end -->
+
+{% endblock %}
+
+{% block extra_footer_js %}
+<script>
+    function alert(){
+        const alertDiv = document.getElementById("success-alert")
+        alertDiv.removeAttribute("hidden")}
+</script>
+{% endblock %}

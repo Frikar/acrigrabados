@@ -1,0 +1,89 @@
+{% extends 'main.html' %}
+{% load static active_link_tags %}
+
+
+{% block meta_title %}
+<title>Servicios - Acrigrabados</title>
+{% endblock %}
+{% block meta_tags %}
+<meta name="description" content="Conoce todos nuestros servicios y encuentra el que más se adapte a tu idea">
+<meta property="og:title" content="Servicios - Acrigrabados">
+<meta property="og:description" content="Conoce todos nuestros servicios y encuentra el que más se adapte a tu idea">
+<meta name="twitter:title" content="Servicios - Acrigrabados">
+<meta name="twitter:description" content="Conoce todos nuestros servicios y encuentra el que más se adapte a tu idea">
+<!-- Metatags no fijas -->
+{% endblock %}
+
+{% block content %}
+    <section id="page-title">
+
+        <div class="container clearfix">
+            <h1>Servicios</h1>
+            <span>Mira nuestros increíbles trabajos</span>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href={% url 'home' %}>Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Servicios</li>
+            </ol>
+        </div>
+
+    </section><!-- #page-title end -->
+
+    <section id="content">
+        <div class="content-wrap pb-0">
+            <div class="container clearfix">
+
+                <div class="grid-filter-wrap">
+                    {% with obj_list=categories %}
+                        <!-- Portfolio Filter
+                        ============================================= -->
+                        <ul class="nav nav-pills pb-5">
+                            <li class="nav-item"><a class="nav-services {% active_link 'services' strict=True %}" href="{% url 'services' %}">Ver todos</a>
+                            </li>
+                            {% for obj in obj_list %}
+                                <li class="nav-item"><a class="nav-services"
+                                                        href="{% url 'category' obj.slug %}">{{ obj.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                        <!-- Portfolio Items
+                        ============================================= -->
+                        <div id="portfolio" class="portfolio portfolio-reveal row grid-container g-0"
+                             data-layout="fitRows">
+
+                            {% for obj in obj_list %}
+                                {% if obj.image %}
+                                    <article class="portfolio-item col-md-4 col-sm-6 col-12 ">
+                                        <div class="grid-inner">
+                                            <div class="portfolio-image">
+                                                <img src="/media/{{ obj.image }}" alt="{{ obj.name }}">
+                                                <div class="bg-overlay">
+                                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                                         data-hover-parent=".portfolio-item">
+                                                        <a href="{% url 'category' obj.slug %}"
+                                                           class="overlay-trigger-icon bg-light text-dark"
+                                                           data-hover-animate="fadeInDownSmall"
+                                                           data-hover-animate-out="fadeOutUpSmall"
+                                                           data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                                           title="Image"><i class="icon-line-outbox"></i></a>
+                                                    </div>
+                                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                                         data-hover-parent=".portfolio-item"></div>
+                                                </div>
+                                            </div>
+                                            <div class="portfolio-desc">
+                                                <h3><a href="{% url 'category' obj.slug %}">{{ obj.name }}</a></h3>
+                                            </div>
+                                        </div>
+                                    </article>
+                                {% endif %}
+                            {% endfor %}
+
+                        </div><!-- #portfolio end -->
+
+                        </div>
+                        </section><!-- #content end -->
+                    {% endwith %}
+{% endblock %}
