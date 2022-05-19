@@ -41,7 +41,8 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
                  'qa.acrigrabados.com',
-                 'acrigrabados.com']
+                 'acrigrabados.com',
+                 'www.acrigrabados.com']
 
 # Application definition
 
