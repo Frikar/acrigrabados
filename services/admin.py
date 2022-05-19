@@ -9,7 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
     def preview(self,obj):
         if obj.image:
-            return format_html('<img src="{0}" style="width: 100px; height:100px;" />'.format(obj.image.url))
+            return format_html('<img src="{0}" style="width: 100px; height:100px;" />'.format(f'/media/{obj.image}'))
         else:
             return "Sin imagen"
 
@@ -29,7 +29,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     def preview(self,obj):
         if obj.image:
-            return format_html('<img src="{0}" style="width: 100px; height:100px;" />'.format(obj.image.url))
+            return format_html('<img src="{0}" style="width: 100px; height:100px;" />'.format(f'/media/{obj.image}'))
         else:
             return "Sin imagen"
     
