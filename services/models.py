@@ -11,6 +11,7 @@ class Category(models.Model):
         return self.name
 
     class Meta:  # new
+        ordering = ['name']
         verbose_name_plural = "Categories"
 
     def get_absolute_url(self):
@@ -34,3 +35,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:  # new
+        ordering = ['name']

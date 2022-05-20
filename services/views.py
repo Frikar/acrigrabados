@@ -10,7 +10,7 @@ def services(request):
 
 
 def category(request, slug):
-    categories = Category.objects.all()
+    categories = Category.objects.all().order_by('name')
     obj = Category.objects.get(slug=slug)
     context = {"category": obj, "categories": categories}
     return render(request, 'services/category.html', context)
